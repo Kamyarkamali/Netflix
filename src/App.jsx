@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './App.css';
 
 //Components
@@ -17,6 +18,10 @@ import { AuthContextProvider } from './Components/Context/Autch';
 
 function App() {
 
+  useEffect(()=>{
+    document.title="Netflix Deutschland-Serien online"
+  },[])
+
   return (
     <div className="App">
       <AuthContextProvider>
@@ -24,7 +29,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home/>}/>
         <Route path='/login' element={<Login/>}/>
-        <Route path='/singup' element={<SingUp/>}/>
+        <Route path='/sinup' element={<SingUp/>}/>
         <Route path='/acount' element={<Account/>}/>
       </Routes>
       </AuthContextProvider>
